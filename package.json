@@ -1,0 +1,23 @@
+{
+  "name": "choose_uni",
+  "version": "1.0.0",
+  "author": "May Mya Mya Cin <maymyamyacin@gmail.com>",
+  "description": "application",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.10.0",
+    "nodemon": "^2.0.20"
+  },
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/MMMC-Chrono/Choose_Uni_App.git"
+	}
+}
