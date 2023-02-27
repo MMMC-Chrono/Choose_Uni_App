@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --brown: #603c21;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -16,27 +20,25 @@ body {
 }
 
 h1 {
-    color: #805635ab;
-}
-
-button {
-    position: relative;
-    background: #805635;
-    color: white;
-    width: 11rem;
-    height: 6rem;
-    margin: 3rem;
-    margin-top: 5rem;
-    border-color: transparent;
-    border-radius: 1rem;
-    box-shadow: 0px 1px 2px gray;
+    color: var(--brown);
     opacity: 0.7;
-    font-size: 2rem;
 }
 
-button:hover {
-    transform: scale(1.05);
-    transition: opacity .2s transform 3s;
-    opacity: 1
-    
+a {
+    position: relative;
+    top: 3rem;
+    background: var(--brown);
+    color: white;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 1;
+    transition: opacity 0.3s;
+    cursor: pointer;
+    box-shadow: 0rem 0.3rem 0.5rem gray;
 }
