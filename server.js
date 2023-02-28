@@ -11,10 +11,15 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static('asserts'))
 app.use(express.json())
 
+mongoose.connect(process.env.DB)
+        .then(() => console.log("connected MongoDB successfully......."))
+        .catch((e) => console.log(e))
+
 const { 
     main_page,
     add_page,
-    list_page } = require('./controllers/functions')
+    list_page,
+    create_doc } = require('./controllers/functions')
 
 
 app.route('/')
@@ -22,6 +27,7 @@ app.route('/')
 
 app.route('/add')
    .get(add_page)
+   .post(create_doc)
 
 app.route('/list')
    .get(list_page)
