@@ -4,9 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>App | Add</title>
+    <link rel="stylesheet" href="add.css">
 </head>
 <body>
-    <h1>add</h1>
+    <nav id="header">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="list">List</a></li>
+        </ul>
+    </nav>
+    <h1>Add info</h1>
+    <form action="/add" method="post">
+        <div>
+            <label for="title">Title</label>
+            <input type="text" name="title" placeholder="name">
+        </div>
+        <div>
+            <label for="link">Link</label>
+            <input type="text" name="link" placeholder="https://cambriancollege.ca/">
+        </div>
+        <div>
+            <label for="price">Price</label>
+            <input type="text" name="price" placeholder="1000 CAD">
+        </div>
+        <div>
+            <label for="program">Program</label>
+            <input type="text" name="program" placeholder="name">
+        </div>
+        <div>
+            <label for="about">About Program</label>
+            <textarea type="text" name="about" placeholder="type....."></textarea>
+        </div>
+        <div>
+            <label for="note">Note(optional)</label>
+            <textarea type="text" name="note" placeholder="type....."></textarea>
+        </div>
+        <div>
+            <label for="selection">Selection</label>
+            <select name="selection" id="selection">
+                <option value="ok">OK</option>
+                <option value="no">NO</option>
+            </select>
+        </div>
+        <input type="submit" value="Submit" id="submit">
+    </form>
+    <script src="add.js"></script>
 </body>
 </html>
