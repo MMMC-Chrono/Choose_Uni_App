@@ -1,15 +1,18 @@
 const Uni = require('./models')
+const { getAll } = require('../asserts/list')
 
 const main_page = (req, res) => {
-    res.sendFile(process.cwd()+ '/asserts/index.html')
+    return res.sendFile(process.cwd()+ '/asserts/index.html')
 }
 
 const add_page = (req, res) => {
-    res.sendFile(process.cwd() + '/asserts/add.html')
+    return res.sendFile(process.cwd() + '/asserts/add.html')
 }
 
-const list_page = (req, res) => {
-    res.sendFile(process.cwd() + '/asserts/list.html')
+const list_page = async(req, res) => {
+    const uni = await Uni.find()
+    getAll(uni)
+    return res.sendFile(process.cwd() + '/asserts/list.html')
 }
 
 const create_doc = async (req, res) => {
@@ -22,9 +25,14 @@ const create_doc = async (req, res) => {
     return res.send("Something went wrong")
 }
 
+const filter = async(req, res) => {
+    console.log(req.body)
+}
+
 module.exports = {
     main_page,
     add_page,
     list_page,
-    create_doc
+    create_doc,
+    filter
 }
