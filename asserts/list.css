@@ -14,19 +14,11 @@ html {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
     font-family: 'Helvetica';
     font-size: 1.6rem;
     font-weight: lighter;
     color: var(--brown);
     opacity: 0.7;
-}
-
-h1 {
-    position: relative;
-    top: 5rem;
 }
 
 nav {
@@ -64,3 +56,35 @@ a:hover {
     transition: opacity 0.2s;
 }
 
+#main {
+    display: flex;
+    position: relative;
+    top: 4rem;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+}
+
+h1 {
+    margin: 2rem;
+}
+
+#search, #price, #types {
+    margin-right: 2rem;
+}
+
+#filter {
+    background-color: var(--brown);
+    color: var(--beige);
+    padding: 1rem;
+    border-color: transparent;
+    border-radius: 1rem;
+}
+
+#filter:hover {
+    box-shadow: 0rem 0.3rem 0.5rem gray;
+    color: white;
+    cursor: pointer;
+}
