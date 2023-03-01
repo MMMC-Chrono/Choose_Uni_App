@@ -105,3 +105,20 @@ form div input {
     border-color: var(--beige);
     background-color:#351c09
 }
+
+#tick {
+    position: relative;
+    top: 10rem;
+    height: 10rem;
+    width: 10rem;
+    margin: auto;
+    z-index: 100;
+}
+
+#added {
+    position: relative;
+    top: 13rem;
+    width: auto;
+    color: var(--brown);
+    font-size: 3rem;
+}
