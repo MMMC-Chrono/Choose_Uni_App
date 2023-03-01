@@ -19,7 +19,8 @@ const {
     main_page,
     add_page,
     list_page,
-    create_doc } = require('./controllers/functions')
+    create_doc,
+    filter } = require('./controllers/functions')
 
 
 app.route('/')
@@ -31,6 +32,7 @@ app.route('/add')
 
 app.route('/list')
    .get(list_page)
+   .post(filter)
 
 app.use(function(req, res, next) {
     res.status(404)
