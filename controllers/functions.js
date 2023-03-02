@@ -1,5 +1,4 @@
 const Uni = require('./models')
-const { getAll } = require('../asserts/list')
 
 const main_page = (req, res) => {
     return res.sendFile(process.cwd()+ '/asserts/index.html')
@@ -10,8 +9,6 @@ const add_page = (req, res) => {
 }
 
 const list_page = async(req, res) => {
-    const uni = await Uni.find()
-    getAll(uni)
     return res.sendFile(process.cwd() + '/asserts/list.html')
 }
 
@@ -25,8 +22,15 @@ const create_doc = async (req, res) => {
     return res.send("Something went wrong")
 }
 
+const getAllUni = async (req, res) => {
+    const uni = await Uni.find()
+    return res.send(uni)
+}
+
+
 const filter = async(req, res) => {
     console.log(req.body)
+
 }
 
 module.exports = {
@@ -34,5 +38,6 @@ module.exports = {
     add_page,
     list_page,
     create_doc,
-    filter
+    filter,
+    getAllUni
 }
