@@ -20,7 +20,8 @@ const {
     add_page,
     list_page,
     create_doc,
-    filter } = require('./controllers/functions')
+    filter,
+    getAllUni } = require('./controllers/functions')
 
 
 app.route('/')
@@ -33,6 +34,9 @@ app.route('/add')
 app.route('/list')
    .get(list_page)
    .post(filter)
+
+app.route('/list/uni')
+   .get(getAllUni)
 
 app.use(function(req, res, next) {
     res.status(404)
