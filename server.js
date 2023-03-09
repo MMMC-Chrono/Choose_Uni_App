@@ -20,7 +20,7 @@ const {
     add_page,
     list_page,
     create_doc,
-    filter,
+    deleted,
     getAllUni } = require('./controllers/functions')
 
 
@@ -33,8 +33,10 @@ app.route('/add')
 
 app.route('/list')
    .get(list_page)
-   .post(filter)
 
+app.route('/deleted')
+   .post(deleted)
+   
 app.route('/list/uni')
    .get(getAllUni)
 
