@@ -7,7 +7,9 @@ let UniSchema = new mongoose.Schema({
     program: String,
     about: String,
     note: String,
-    selection: String
+    selection: String,
+    deadline: String,
+    deadline_link: String
 }, {
     versionKey: false
 })
