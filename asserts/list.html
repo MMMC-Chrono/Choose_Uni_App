@@ -15,25 +15,15 @@
         </ul>
     </nav>
     <div id="main">
-        <h1>View List</h1>
-        <form action="/list" method="post">
-            <label for="search">Search by name</label>
-            <input type="text"  name="search" id="search">
-            <label for="price">Sort by Price</label>
-            <select name="price" id="price">
-                <option value="ALL">ALL</option>
-                <option value="L2H">Low to High</option>
-                <option value="H2L">High to Low</option>
-            </select>
-            <label for="selectType">Category</label>
-            <select name="selectType" id="types">
-                <option value="ALL">ALL</option>
-                <option value="OK">OK</option>
-                <option value="NO">NO</option>
-            </select>
-            <input type="submit" value="filter" id="filter">
+        <h1>List</h1>
+        <form action="/deleted" method="post">
+            <label for="delete_sch">Delete school</label>
+            <input type="text" name="delete_sch">
+            <input type="submit" id="submit" value="Delete">
         </form>
-        <div id="list"></div>
+        <div id="list">
+            <h4>All school list:</h4>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"
         integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
