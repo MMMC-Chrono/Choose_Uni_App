@@ -1,0 +1,83 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --brown: #603c21;
+    --beige: #f4ddcc;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Helvetica';
+    font-size: 1.6rem;
+    font-weight: lighter;
+    color: var(--brown);
+    opacity: 0.7;
+}
+
+h1 {
+    position: relative;
+    top: 5rem;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    background: var(--beige);
+    height: 4rem;
+    text-align: right;
+    font-size: 2.1rem;
+    font-weight: 600;
+    z-index: 100;
+}
+
+nav li {
+    position: relative;
+    display: inline;
+    margin: 0 5rem;
+    right: 5rem;
+    top: 0.7rem;
+}
+
+.activated {
+    box-shadow: 0rem 0rem 1rem gray;
+    transition: box-shadow 0.5s;
+}
+
+a {
+    text-decoration: none;
+    color: var(--brown);
+    opacity: 0.6;
+}
+
+a:hover {
+    opacity: 1;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+#tick {
+    position: relative;
+    top: 10rem;
+    height: 10rem;
+    width: 10rem;
+    margin: auto;
+    z-index: 100;
+}
+
+#added {
+    position: relative;
+    top: 13rem;
+    width: auto;
+    color: var(--brown);
+    font-size: 3rem;
+}
